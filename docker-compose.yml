@@ -1,0 +1,13 @@
+version: '3.7'
+services: 
+  bitbucket:
+    image: atlassian/bitbucket-server:7.5.2-ubuntu-jdk11
+    container_name: bitbucket-server
+    ports:
+      - 7990:7990
+      - 7999:7999
+    volumes:
+      - bitbucketVolume:/var/atlassian/application-data/bitbucket
+
+volumes:
+  bitbucketVolume:
